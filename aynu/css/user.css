@@ -1,0 +1,136 @@
+body{
+  padding-top:60px;
+  padding-bottom:70px;
+}
+/*头部*/
+header{
+  height:60px;
+  width:100%;
+  background: #0dc441;
+  display: -webkit-flex;
+  justify-content: space-around;
+  align-items: center;
+  position:fixed;
+  top:0; 
+  z-index:18; 
+}
+header div{
+  display:-webkit-flex; 
+  -webkit-flex-wrap:wrap;   
+  justify-content: center;
+  align-items: center;
+}
+header .tou{
+  height:35px; 
+  width:100px;
+  display:-webkit-flex;   
+  justify-content: center;
+  align-items: center;
+  background:rgba(255,255,255,.4);
+  color:#0dc441;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:18px;
+}
+header i{
+  display:block;    
+  font-size:35px !important;
+  color:#ccc;
+  opacity: 0.5;  
+}
+header i:hover{
+  color:yellow; 
+}
+
+
+
+/*主题内容*/
+#yonghu li{ 
+  background: repeat-x bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#ccc' x='0' y='0' width='1' height='0.5'/></svg>");  
+}
+#box{
+   padding:20px 15px 10px 5px; 
+}
+#box h3{
+  color:#0dc441; 
+}
+#box .x1{
+  float:left; 
+  display:-webkit-flex;
+  flex-direction:row;  
+}
+#box .x1 img{
+  width:45px;
+  height:45px;   
+}
+#box .x2{
+  float:right;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  color:#0dc441;
+  font-size:12px;  
+}
+#box .x2 img{
+  margin-left:5px;
+  width:15px;
+  height:15px;  
+}
+#box p{
+  display:block; 
+  line-height:20px;
+  background-color:rgba(0,255,0,0.05);
+  color:black; 
+  opacity:0.5;  
+}
+#box p,figure{
+  clear:both;
+  font-size:15px;   
+}
+#box figure{
+  text-align:center;
+  color:#0dc441;  
+}
+
+
+/*底部*/
+footer{
+  position:fixed;
+  bottom:0;
+  z-index:10;
+  width:100%; 
+}
+footer ul{
+  width:100%;    
+  height:70px;
+  display:-webkit-flex;  
+  background: #0dc441 !important;
+}
+footer ul li{
+  display:-webkit-flex;
+  flex: 1;
+  justify-content: center;
+  align-items:center; 
+  -webkit-flex-wrap:wrap; 
+}
+footer ul li div{
+  display:-webkit-flex;
+  width:100%; 
+  justify-content: center;
+  align-items:center;   
+}
+footer ul li:hover i{
+   color:yellow; 
+}
+footer ul li:hover span{
+   color:yellow; 
+}
+footer i{
+  font-size:25px !important;
+  display:block;
+  color:#ccc;
+  opacity: 0.5;  
+}
+footer span{
+  color:white;
+  font-size:15px; 
+}

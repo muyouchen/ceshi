@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>滚动播报新闻</title>
+    <script>
+    	function ye(){
+			return "rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")";
+		}
+		window.onload=function(){
+			var tt=document.getElementById("tt");
+			var bb=document.getElementById("bb");
+			var uu=document.getElementById("uu");
+			var zt=bb.nextElementSibling;
+			
+			zt.onclick=function(){
+				var bbv=ye();
+				document.body.style.background=bbv;
+				var now=new Date();
+				now.setMinutes(now.getMinutes()+10);
+			}
+			var xw = ['小明由于调戏女老师再次被滚粗教室','iPhone10发布,屏幕高度亮瞎了所有小伙伴','为增加收视率，《跑男》第十季决定邀请香港四大天王参加，但由于年龄太大实在跑不动','为了弘扬乐于助人的精神，中国人大开会决定授予老王“中国好邻居”称号'];
+			var aa="";
+			for(var i=0;i<xw.length;i++){
+				aa+='<li><a href="#">'+(i+1)+'-'+xw[i]+'</a></li>';
+			}
+			uu.innerHTML=aa;
+			bb.onclick=function(){
+				xw.unshift(tt.value);
+				var aa="";
+				for(var i=0;i<xw.length;i++){
+					aa+='<li><a href="#">'+(i+1)+'-'+xw[i]+'</a></li>';
+				}
+				uu.innerHTML=aa;
+			}
+			setInterval(function(){
+				xw.unshift(xw.pop());
+				var aa="";
+				for(var i=0;i<xw.length;i++){
+				aa+='<li><a href="#">'+(i+1)+'-'+xw[i]+'</a></li>';
+				}
+				uu.innerHTML=aa;
+			}
+			,2000)
+		}
+    </script>
+</head>
+<body>
+	<input type="text" id="tt"><button id="bb">添加</button><button>更换主题</button>
+    <h1>新闻早知道</h1>
+    <ul id="uu">
+    </ul>
+</body>
+</html>

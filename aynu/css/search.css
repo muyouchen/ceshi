@@ -1,0 +1,220 @@
+body{
+  padding-top:60px;
+  padding-bottom:70px;
+}
+/*头部*/
+header{
+  height:60px;
+  width:100%;
+  background: #0dc441;
+  display: -webkit-flex;
+  justify-content: space-around;
+  align-items: center;
+  position:fixed;
+  top:0; 
+  z-index:18; 
+}
+header div{
+  display:-webkit-flex; 
+  -webkit-flex-wrap:wrap;   
+  justify-content: center;
+  align-items: center;
+}
+header .tou{
+  height:35px; 
+  width:100px;
+  display:-webkit-flex;   
+  justify-content: center;
+  align-items: center;
+  background:rgba(255,255,255,.4);
+  color:#0dc441;
+  font-size:18px;
+  font-weight:bold;
+  border-radius:18px;
+}
+header i{
+  display:block;    
+  font-size:35px !important;
+  color:#ccc;
+  opacity: 0.5;  
+}
+header i:hover{
+  color:yellow; 
+}
+
+
+
+
+
+#box{
+  padding:10px;
+  display:-webkit-flex;
+  webkit-flex-direction:row;   
+}
+#box input{
+  border:1px solid #ccc;
+  width:250px;
+  height:25px;
+  text-indent:1em;  
+  border-radius:6px;  
+}
+#box button{
+  display:-webkit-flex;
+  justify-content:center;
+  align-items:center;  
+  background:#0dc441;
+  width:40px; 
+  height:25px;
+  color:#fff;
+  border-radius:6px;
+  border:none;
+  margin-left:8px;  
+}
+#box2{
+   display: -webkit-flex;
+   -webkit-flex-direction: row;
+   padding:10px;
+   position:relative;
+   border-bottom:1px solid #ccc;   
+}
+#box2 .x1{
+  width:45px;
+  height:45px;
+  margin-right:10px;   
+}
+#box2 .x2{
+  display:-webkit-flex;
+  justify-content:center;
+  align-items:center; 
+  position:absolute;
+  top:8px;
+  right:10px;   
+  color:#fff;
+  height:25px;
+  width:40px; 
+  background:#0dc441;
+  border-radius:5px;
+  font-size:12px; 
+
+}
+#box2>span{
+  font-size:15px;
+  font-weight:bold;
+  color:#0dc441;  
+}
+#box2 p{
+  font-size:13px;
+  color:#999999;
+  position:absolute;
+  left:65px;
+  top:35px;   
+}
+
+/*search动画效果*/
+#search{
+  width:200px;
+  height: 200px;
+  background: transparent;
+  margin: 10px auto;
+  position:relative;
+  font-size:15px;    
+}
+@keyframes donghua{
+  form{transform: scale(0);opacity: 1;}
+  to{transform: scale(1);opacity: 0;}
+}
+#squ1{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  line-height: 80px;
+  text-align: center;
+  color:  #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s linear infinite;      
+}
+#squ2{
+  color:  #0dc441;
+  width: 110px;
+  height: 110px;
+  text-align:center;
+  line-height:110px; 
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s .5s linear infinite;
+}
+#squ3{
+  color:#0dc441;
+  width: 140px;
+  height: 140px;
+  text-align:center;
+  line-height:140px; 
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s .8s linear infinite;
+}
+#squ4{
+  color:#0dc441;
+  width: 170px;
+  height: 170px;
+  text-align:center;
+  line-height:170px;    
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s 1s linear infinite;
+}
+
+/*底部*/
+footer{
+  position:fixed;
+  bottom:0;
+  z-index:10;
+  width:100%; 
+}
+footer ul{
+  width:100%;    
+  height:70px;
+  display:-webkit-flex;  
+  background: #0dc441 !important;
+}
+footer ul li{
+  display:-webkit-flex;
+  flex: 1;
+  justify-content: center;
+  align-items:center; 
+  -webkit-flex-wrap:wrap; 
+}
+footer ul li div{
+  display:-webkit-flex;
+  width:100%; 
+  justify-content: center;
+  align-items:center;   
+}
+footer ul li:hover i{
+   color:yellow; 
+}
+footer ul li:hover span{
+   color:yellow; 
+}
+footer i{
+  font-size:25px !important;
+  display:block;
+  color:#ccc;
+  opacity: 0.5;  
+}
+footer span{
+  color:white;
+  font-size:15px; 
+}

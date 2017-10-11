@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>media+flex</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<style type="text/css">
+	*{
+		padding: 0;margin: 0;
+	}
+	.container{
+		display: flex;
+		width:100%;
+		height: 600px; 
+	}
+	.container div{
+		display:flex;
+		justify-content:center;
+		align-items:center;   
+		font-size: 30px;
+		font-family: "微软雅黑";
+		margin: 10px;
+		
+	}
+	@media screen and (min-width: 1000px){
+		.container div{
+			height: 600px;
+			color:white;
+		}
+		.left{
+			flex:1;
+			background:red;
+		}
+		.main{
+			flex:3;
+			background:green;
+		}
+		.aside{
+			flex:1;
+			background:blue;
+		}
+	}
+	@media screen and (min-width: 640px) and (max-width: 999px){
+		.container{
+			flex-flow:row wrap;
+			color:red; 
+		}
+		.container div{
+			align-items:flex-start;
+		}
+		.left{
+			flex:1;
+			background:orange;
+			height: 400px;
+		}
+	    .main{
+			flex:3;
+			background:pink;
+			height: 400px;
+			
+		}
+		.aside{
+			height: 160px;
+			width: 100%;
+			background:yellow;
+		}
+	}
+	@media screen and  (max-width: 639px){
+		.container{
+			flex-direction:column;
+			color:blue;
+		}
+		.container div{
+			margin: 10px;
+			height: 200px;
+			align-items:flex-end;
+		}
+		.left{
+		 	flex:1;
+		    background: #edd;
+		}
+		.main{
+			flex:1;
+			background: #3dd32e;
+		}
+		.aside{
+			flex:1;
+			background: #63edde;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="left">左-考拉课堂</div>
+		<div class="main">中-考拉课堂</div>
+		<div class="aside">右-考拉课堂</div>
+	</div>
+</body>
+</html>

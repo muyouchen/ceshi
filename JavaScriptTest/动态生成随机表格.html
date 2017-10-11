@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>动态生成随机表格</title>
+     <style>
+     	#tt{
+     		width:570px;
+     		margin:0 auto; 
+     	}
+		table{border-collapse:collapse;}
+		td{border:1px solid black;width:100px;height:10px;text-align:center;color:white;cursor:pointer;   }
+		#dd{heigth:30px;color:white;text-align:center;  }
+	</style>
+    <script>
+		function ye(){
+			return "rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")";
+		}
+		window.onload=function(){
+			var aa=document.getElementById('aa');
+			var bb=document.getElementById('bb');
+			var cc=document.getElementById('cc');
+			var dd=document.getElementById('dd');
+			var ee=document.getElementById('ee');
+			cc.onclick=function(){
+				ee.innerHTML="";
+				for(var i=0;i<aa.value;i++){
+					var tr=document.createElement('tr');
+					for(var j=0;j<bb.value;j++){
+						var td=document.createElement('td');
+						td.innerHTML=(i+1)+"行"+(j+1)+"列";
+						var gg=ye();
+						td.style.background=gg;
+						tr.appendChild(td);
+					}
+					ee.appendChild(tr);
+				}
+				var td=ee.getElementsByTagName('td');
+				for(var h=0;h<td.length;h++){
+					td[h].onclick=function(){
+						dd.innerHTML="当前是："+this.innerHTML+",颜色："+this.style.background;
+						var hy=this.style.background;
+						dd.style.background=hy;
+					}
+				}	
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="tt">
+	    <lable>行数：</lable>
+		<input type="text" id="aa">
+	    <lable>列数：</lable>
+	    <input type="text" id="bb">
+	    <button id="cc">生成表格</button>
+    </div>
+    <div id="dd">
+    </div>
+	<div>
+    <table id="ee"></table>
+    </div>
+</body>
+</html>

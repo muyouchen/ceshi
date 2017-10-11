@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>小球触壁反弹</title>
+    <style>
+		html,body{width:100%;height:100%;overflow:hidden;}
+		#dangban{color:red; }
+		#qiu{position:absolute;top:0;left:0;width:50px;height:50px;border-radius:50%;background:red;box-shadow:0 0 30px rgba(0,50,50,.8);}
+		#zhangai{width:100px;height:10px;background:blue;position:absolute;bottom:100px;left:100px;}
+	</style>
+    <script>
+		window.onload=function(){
+			var qiu=document.getElementById('qiu');
+			var zhangai=document.getElementById('zhangai');
+			var xsudu=5;
+			var ysudu=10;
+			var yemian=document.documentElement;
+			var gaodu1=yemian.offsetHeight;
+			var gaodu2=qiu.offsetHeight;
+			var gaodu3=gaodu1-gaodu2;
+			var kuan1=yemian.offsetWidth;
+			var kuan2=qiu.offsetWidth;
+			var kuan3=kuan1-kuan2;
+			var zhangaigao=zhangai.offsetHeight;
+			var zhangaikuan=zhangai.offsetWidth;
+			setInterval(function(){
+			
+			
+			var kaishileft=qiu.offsetLeft;
+			var kaishitop=qiu.offsetTop;
+			if(kaishitop>=gaodu3){
+				ysudu*=-1;
+			}
+			if(kaishitop<0){
+				ysudu*=-1;
+			}
+			if(kaishileft>=kuan3){
+				xsudu*=-1;
+			}
+			if(kaishileft<0){
+				xsudu*=-1;
+			}
+			if(((kaishileft>=zhangai.offsetLeft-kuan2)&&(kaishileft<=zhangai.offsetLeft+zhangaikuan))&&((kaishitop>=zhangai.offsetTop-gaodu2)&&(kaishitop<=zhangai.offsetTop+zhangai.offsetHeight))){
+				ysudu*=-1;
+			}
+			qiu.style.left=kaishileft+xsudu+'px';
+			qiu.style.top=kaishitop+ysudu+'px';
+			}
+			,20)
+			var sudu=4;
+			document.onkeydown=function(e){
+				var e=e||window.event;
+				if(e.keyCode==37){
+					zhangai.style.left=zhangai.offsetLeft-(sudu++)+'px';
+					if(zhangai.offsetLeft<=0){
+						zhangai.style.left=0+'px';
+						sudu=0;
+					}	
+				}
+				if(e.keyCode==39){
+					zhangai.style.left=zhangai.offsetLeft+(sudu++)+'px';
+					if(zhangai.offsetLeft>=(kuan1-zhangai.offsetWidth)){
+						zhangai.style.left=kuan1-zhangai.offsetWidth+'px';
+						sudu=0;
+					}
+				}	
+			}
+			
+				
+		}
+	</script>
+</head>
+<body>
+	<div id="dangban">请用键盘左右键移动挡板触球</div>
+	<div id='qiu'></div>
+    <div id='zhangai'></div>
+</body>
+</html>

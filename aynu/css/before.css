@@ -1,0 +1,124 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+#tq{
+	width: 100%;
+	height: 100%;
+}
+#tq .slide1,#tq .slide2{
+	width: 100%;
+	height: 100%;
+	display:-webkit-flex; 
+	flex-direction: column;
+}
+#tq .slide1 .box{
+	width:100%; 
+	background:url(../imgs/23.jpg);
+	background-size:100%; 
+	height:170px;  
+}
+/*search动画效果*/
+#tq .slide1 .box1{
+	background:transparent;
+	width:100%;
+	flex:1;
+	position:relative;
+	font-size:18px;    
+}
+@keyframes donghua{
+  form{transform: scale(0);opacity: 1;}
+  to{transform: scale(1);opacity: 0;}
+}
+#tq .slide1 #squ1{
+  width: 110px;
+  height:110px;
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  line-height: 110px;
+  text-align: center;
+  color:  #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s linear infinite;      
+}
+#tq .slide1 #squ2{
+  color:  #0dc441;
+  width: 140px;
+  height: 140px;
+  text-align:center;
+  line-height:140px; 
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s .5s linear infinite;
+}
+#tq .slide1 #squ3{
+  color:#0dc441;
+  width: 170px;
+  height: 170px;
+  text-align:center;
+  line-height:170px; 
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s .8s linear infinite;
+}
+#tq .slide1 #squ4{
+  color:#0dc441;
+  width: 200px;
+  height: 200px;
+  text-align:center;
+  line-height:200px;    
+  border-radius: 50%;
+  border: 1px solid #0dc441;
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  margin: auto;
+  animation: donghua 2s 1s linear infinite;
+}
+
+#tq .slide1 .box2{
+	width:100%; 
+	background:url(../imgs/7.jpg);
+	background-size:100%; 
+	height:170px;  
+}
+#tq .slide2 .box{
+  width:100%; 
+  background:url(../imgs/32.png);
+  background-size:100%; 
+  height:180px;  
+}
+#tq .slide2 .box1{
+  display:-webkit-flex;
+  justify-content:center;
+  align-items:center;   
+  width:100%;
+  flex:1;
+  background: #0dc441; 
+  font-size:30px; 
+}
+#tq .slide2 .box1 a{
+  color:white;  
+}
+#tq .slide2 .box2{
+  width:100%; 
+  background:url(../imgs/35.jpg);
+  background-size:100%; 
+  height:180px;  
+}
+#tq .slide2 i{
+  font-size:30px;
+}
+#tq .swiper-pagination-bullet{
+      background:#0dc441;
+      width:12px;
+      height:12px;
+      border-radius:50%;      
+}

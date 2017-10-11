@@ -1,0 +1,311 @@
+body{
+  padding-top:60px;
+  padding-bottom:70px;
+  overflow:hidden;
+}
+/*头部*/
+header{
+  height:60px;
+  width:100%;
+  background: #0dc441;
+  display: -webkit-flex;
+  justify-content:space-around;
+  align-items: center;
+  position:fixed;
+  top:0; 
+  z-index:18;
+    
+}
+header div{
+  display:-webkit-flex; 
+  -webkit-flex-wrap:wrap;   
+  justify-content: center;
+  align-items: center;
+}
+header .tou a:nth-child(1),header .tou a:nth-child(2){
+  display:-webkit-flex;
+  justify-content: center;
+  align-items: center;
+  background:rgba(255,255,255,.4);
+  color:#0dc441;
+  font-size:15px;
+  font-weight:bold;
+  height:35px;
+  width:70px;   
+}
+header .tou a:nth-child(1){
+  border-radius:18px 0 0 18px;
+  background:rgba(255,255,255,.8);
+}
+header .tou a:nth-child(2){
+  border-radius:0 18px 18px 0; 
+}
+header i{   
+  font-size:35px !important;
+  color:#ccc;
+  opacity: 0.5;  
+}
+header i:hover{
+  color:yellow; 
+}
+/*主题模块*/
+/*1.安师要闻*/
+#swiper-container2 img{
+  width:100%;
+  height:150px;  
+}
+#swiper-pagination2{
+  font-size:25px;
+  color:white; 
+}
+/*2.顶部tab切换*/
+.my-pagination{
+  width:100%; 
+  display:-webkit-flex;   
+}
+.my-pagination .swiper-pagination-bullet{ 
+  flex:1;
+  height:40px;
+  display:-webkit-flex; 
+  border-radius: 0;
+  background-color:#ccc;
+  font-size: 15px; 
+  justify-content:center;
+  align-items:center;
+  margin:0 !important;
+}
+.my-pagination .swiper-pagination-bullet-active{
+  color:#0dc441;
+  background:rgba(0,255,0,.4);  
+}
+/*3.安师众创*/
+#as1 {
+  margin-top:10px; 
+  width:80%;
+  height:150px;
+}
+#as1 .swiper-wrapper div{
+  display:-webkit-flex;
+  justify-content: center;
+  align-items: center;
+  color:#0dc441;
+  font-size:25px;
+  font-weight:bold;   
+}
+#as1 .swiper-wrapper div:nth-child(1){
+  background:url(../imgs/34.jpg);
+  background-size:cover; 
+}
+#as1 .swiper-wrapper div:nth-child(2){
+  background:url(../imgs/36.jpg);
+  background-size:cover;  
+}
+#as1 .swiper-wrapper div:nth-child(3){
+  background:url(../imgs/20.jpg); 
+  background-size:cover; 
+}
+#as1 .swiper-wrapper div:nth-child(4){
+  background:url(../imgs/28.jpg); 
+  background-size:cover; 
+}
+/*2.安师校园*/
+#as2{
+  width:90%;
+  margin-top:20px;  
+}
+#as2 .swiper-wrapper div{
+  height:150px; 
+  display:-webkit-flex;
+  justify-content: center;
+  align-items: center;
+  color:#0dc441;
+  font-size:20px;
+  font-weight:bold;   
+}
+#as2 .swiper-wrapper div:nth-child(1){
+  background:url(../imgs/21.jpg);
+  background-size:cover; 
+}
+#as2 .swiper-wrapper div:nth-child(2){
+  background:url(../imgs/22.jpg);
+  background-size:cover; 
+}
+#as2 .swiper-wrapper div:nth-child(3){
+  background:url(../imgs/33.jpg);
+  background-size:cover; 
+}
+#as2 .swiper-wrapper div:nth-child(4){
+  background:url(../imgs/23.jpg);
+  background-size:cover; 
+}
+#as2 .swiper-wrapper div:nth-child(5){
+  background:url(../imgs/32.png);
+  background-size:cover; 
+}
+#as2 .swiper-wrapper div:nth-child(6){
+  background:url(../imgs/35.jpg);
+  background-size:cover; 
+}
+
+#thelist{
+  padding:15px 8px;
+  margin:0; 
+  background:rgba(0,255,0,0.05);
+}
+#thelist a{
+  color:black; 
+  opacity:0.5; 
+}
+#thelist a:hover{
+  color:#0dc441; 
+}
+#thelist li{
+  font-size:15px; 
+  padding:8px 0 8px 8px;
+  background: repeat-x bottom left url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#ccc' x='0' y='0' width='1' height='0.5'/></svg>"); 
+}
+#chuangke{    
+  margin-top:30px; 
+  padding:0 10px;
+  display:box;
+  -webkit-column-count: 2; 
+}
+#chuangke figure img{
+  height:150px; 
+}
+#chuangke figure{ 
+  display:inline-block;    
+  height:170px;
+  padding: 0;  
+  margin:0 0 10px 0 !important;
+  border:1px solid #ccc;
+  text-align:center;
+  font-size:16px;
+  color:#0dc441;       
+}
+#wrapper{
+  margin-top:-51px; 
+  padding:0;
+  margin:0;
+  overflow:auto;
+  margin-bottom:-102px; 
+}
+#scroller{
+
+  padding:0;
+  margin:0;
+  overflow:auto;
+}
+
+
+#pullDown, #pullUp {
+  background:rgba(0,255,0,.4);;
+  height:40px;
+  line-height:40px;
+  padding:5px 10px;
+  border-bottom:1px solid #ccc;
+  font-weight:bold;
+  font-size:14px;
+  color:orange;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+  display:block; float:left;
+  width:40px; height:40px;
+  background:url(../imgs/pull-icon@2x.png) 0 0 no-repeat;
+  -webkit-background-size:40px 80px; background-size:40px 80px;
+  -webkit-transition-property:-webkit-transform;
+  -webkit-transition-duration:250ms;  
+}
+#pullDown .pullDownIcon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+  -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+  -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+  background-position:0 100%;
+  -webkit-transform:rotate(0deg) translateZ(0);
+  -webkit-transition-duration:0ms;
+
+  -webkit-animation-name:loading;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+  from { -webkit-transform:rotate(0deg) translateZ(0); }
+  to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*底部*/
+footer{
+  position:fixed;
+  bottom:0;
+  z-index:10;
+  width:100%; 
+}
+footer ul{
+  width:100%;    
+  height:70px;
+  display:-webkit-flex;  
+  background: #0dc441 !important;
+}
+footer ul li{
+  display:-webkit-flex;
+  flex: 1;
+  justify-content: center;
+  align-items:center; 
+  -webkit-flex-wrap:wrap; 
+}
+footer ul li div{
+  display:-webkit-flex;
+  width:100%; 
+  justify-content: center;
+  align-items:center;   
+}
+footer ul li:hover i{
+   color:yellow; 
+}
+footer ul li:hover span{
+   color:yellow; 
+}
+footer i{
+  font-size:25px !important;
+  display:block;
+  color:#ccc;
+  opacity: 0.5;  
+}
+footer span{
+  color:white;
+  font-size:15px; 
+}
+//////////////////////////////////////////////////
+#aa{
+  overflow:hidden !important;
+  width:100%;
+  height:430px;
+}
+
+
+
